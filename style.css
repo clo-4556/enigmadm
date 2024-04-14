@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'Glacial Indifference'; 
+    src: url(GlacialIndifference-Regular.otf) format('opentype'); 
+}
+
+*{
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Glacial Indifference', sans-serif; 
+    box-sizing: border-box; 
+}
+
+
+body{
+    background: #080808; 
+    color: #fff; 
+}
+
+#header{
+    width: 100%; 
+    height: 100vh; 
+    background-image: url(images/background.png); 
+    background-size: cover; 
+    background-position: center; 
+    
+}
+.logo{
+    max-width: 150px; 
+}
+.container{
+    padding: 10px 10%;
+}
+.container ul{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+
+nav{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.logo{
+    width: 400px; 
+}
+
+nav ul li{
+    display: inline-block; 
+    list-style: none; 
+    margin: 10px; 
+}
+
+nav ul li a{
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 18px; 
+    position: relative; 
+}
+
+nav ul li a::after{
+    content: ''; 
+    width: 0; 
+    height: 3px; 
+    background: #fc8e25; 
+    position: absolute; 
+    left: 0; 
+    bottom: -6px;
+    transition: 0.5s;  
+}
+
+nav ul li a:hover::after{
+    width: 100%; 
+}
+.landing-page{
+    display: flex; 
+    align-items: center;
+}
+.header-text{
+    margin-top: 10%; 
+    font-size: 30px; 
+  
+
+}
+.header-text h1{
+    font-size: 60px; 
+    margin-top: 20px; 
+    
+}
+.header-text h1 span{
+    color: #fc8e25; 
+}
+.pic{
+    width: 400px;
+    display: flex; 
+    position: relative; 
+
+}
+<!-----------------about--------->
+#about{
+    padding: 80px 0; 
+    color: #ababab; 
+}
+
+.row{
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: flat;
+}
+
+.about-col-1{
+    flex-basis: 35%; 
+    
+}
+
+.about-col-1 img{
+    width: 100%; 
+    border-radius: 15px; 
+    margin-top: 40px;
+    
+}
+
+.about-col-2{
+    flex-basis: 60%;
+    margin-left: 50px; 
+    margin-right: 0px;  
+    
+}
+
+.sub-title{
+    font-size: 60px; 
+    font-weight: 600; 
+    color: #fff; 
+}
+
+.tab-titles{
+    display: flex; 
+    margin: 20px 0 0 40px; 
+}
+
+.tab-links{
+    margin-right: 50px; 
+    font-size: 18px; 
+    font-weight: 500; 
+    cursor: pointer; 
+    position: relative; 
+}
+
+.tab-links::after{
+    content: ''; 
+    width: 0; 
+    height: 3px; 
+    background: #ff004f; 
+    position: absolute; 
+    left: 0; 
+    bottom: -8px; 
+    transition: 0.5s; 
+}
+
+.tab-links.active-link::after{
+    width: 50%; 
+
+}
+
+.tab-contents ul li{
+    list-style: none; 
+    margin: 10px 0; 
+}
+.tab-contents ul li span{
+    color: #ff004f; 
+    font-size: 14px; 
+}
+
+.tab-contents{
+    display: none; 
+}
+.tab-contents.active-tab{
+    display: block; 
+}
+
+/*---------------services----------------*/
+#services{
+    padding: 30px 0; 
+}
+.services-list{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px; 
+    margin-top: 50px; 
+}
+.services-list div{
+    background: #262626; 
+    padding: 40px; 
+    font-size: 13px; 
+    font-weight: 300; 
+    border-radius: 10px; 
+    transition: background 0.5s, transform 0.5s; 
+}
+.services-list .web-design{
+    width: 100px; 
+  
+
+}
+
+.services-list div i{
+    font-size: 50px; 
+    margin-bottom: 30px; 
+}
+.services-list div h2{
+    font-size: 30px; 
+    font-weight: 500; 
+    margin-bottom: 15px; 
+}
+.services-list div p{
+    font-size: 16px;
+}
+.services-list div a{
+    text-decoration: none; 
+    color: #fff; 
+    font-size: 12px; 
+    margin-top: 20px; 
+    display: inline-block; 
+}
+
+.services-list div:hover{
+    background: #fc8e25; 
+    transform: translateY(-10px); 
+}
+/*-----------portfolio---------*/
+#portfolio{
+    padding: 50px 0; 
+}
+h1{
+    margin-top: 10%;
+    text-align: center; 
+}
+
+
+button{
+    
+    transition: all .3s ease-in-out;
+}
+
+.carousel-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 44px 0;
+  transition: all 0.25s ease-in;
+  
+}
+
+.carousel-view .item-list {
+  max-width: 950px;
+  width: 70vw;
+  padding: 50px 10px;
+  display: flex;
+  gap: 48px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.item-list::-webkit-scrollbar {
+  display: none;
+}
+
+.prev-btn {
+  
+  cursor: pointer;
+}
+
+.next-btn {
+  cursor: pointer;
+}
+
+.item {
+  scroll-snap-align: center;
+  min-width: 120px;
+  height: 120px;
+  background-color: deeppink;
+  border-radius:8px;
+}
+
+
+.carousel-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 44px 0;
+  transition: all 0.25s ease-in;
+}
+
+.carousel-view .item-list {
+  max-width: 950px;
+  width: 70vw;
+  padding: 50px 10px;
+  display: flex;
+  gap: 48px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.item-list::-webkit-scrollbar {
+  display: none;
+}
+
+.prev-btn {
+  
+  cursor: pointer;
+}
+
+.next-btn {
+  cursor: pointer;
+}
+
+.item {
+  scroll-snap-align: center;
+  min-width: 120px;
+  height: 120px;
+  background-color: deeppink;
+  border-radius:8px;
+} 
