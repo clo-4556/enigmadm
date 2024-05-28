@@ -15,7 +15,7 @@ jobs:
     - name: Generate sitemap
       run: |
         npm install -g sitemap-generator-cli
-        sitemap-generator-cli http://www.enigmadm.com -o sitemap.xml
+        sitemap-generator-cli https://clo-4556.github.io/-o sitemap.xml
 
     - name: Commit sitemap
       run: |
